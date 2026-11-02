@@ -37,6 +37,7 @@
     if (features.userNotif) selectModules([584, 1390, 2065, 2087, 2116, 2125, 4760, 5108, 7012, 9699, 13933, 13968]);
     if (features.accountSwitcher) selectModules([1390, 5938, 6623, 12129, 12130, 12131, 16387, 16840, 16858]);
     if (features.appIcons) selectModules([1390, 4769, 9464, 14299, 15831, 15832, 17697, 18051]);
+    if (features.profileDecor) selectModules([584, 1390, 4769, 6053, 8338, 10640, 13473, 14902]);
     if (features.nitroThemes) selectModules([584, 1390, 2046, 4769, 4937, 14299, 15566]);
     if (features.customThemes) selectModules([589, 590, 591, 1205, 4831, 4839, 11191, 10368]);
     if (features.materialYou) selectModules([589, 590, 591, 1205, 4831, 4839, 11191]);
@@ -75,7 +76,7 @@
         validUser:false, youBarSettings:false, splitMessages:false,
         translate:false, translateTarget:"discord", translateLanguage:"en", translateMode:"auto", translateAsk:"both", translateNote:true, translateOriginal:false,
         userNotif:false, userNotifFriends:true, userNotifStatus:true, userNotifMessages:true, userNotifTyping:true, userNotifPush:false,
-        accountSwitcher:false, accountSwitcherYouBar:true, appIcons:false, nitroThemes:false, customThemes:false, customThemesBackground:true, materialYou:false, materialYouColor:"wallpaper", materialYouTint:"balanced",
+        accountSwitcher:false, accountSwitcherYouBar:true, appIcons:false, profileDecor:false, nitroThemes:false, customThemes:false, customThemesBackground:true, materialYou:false, materialYouColor:"wallpaper", materialYouTint:"balanced",
         iconPacks:false, iconPacksTheme:true,
         messageHighlight:false, messageHighlightThickness:2, messageHighlightBrightness:50, messageHighlightPingColor:"default", serverInfo:false, serverInfoFriends:true, serverEdit:false,
         fixEmbeds:false, fixEmbedsSites:"", fixEmbedsClean:true, fixEmbedsDark:true, fixEmbedsStyle:"full", fixEmbedsTranslate:"off", fixEmbedsLanguage:"en", tenorGifs:false, tenorGifsSource:"both", hideBlocked:false, hideBlockedBlocked:true, hideBlockedIgnored:true, hideBlockedReplies:false, hideBlockedCloseDms:false, bulkDelete:false, bulkDeleteConfirm:true, bulkDeleteIncludeCached:true, experiments:false, noHandsfree:false, voiceOptions:false, voiceOptionsVolume:false, voiceOptionsVolumeLevel:50, voiceOptionsOutput:"default", voiceOptionsJoinSound:true, voiceOptionsLeaveSound:true, voiceOptionsSoundVolume:100, voiceOptionsExit:false, voiceOptionsExitSound:"", cleanChannels:false, cleanChannelsEmoji:true, cleanChannelsSymbols:true, cleanChannelsFonts:true, cleanChannelsSpaces:false, anonFiles:false, staffTag:false, staffTagOwner:true, staffTagAdmin:true, staffTagManager:true, staffTagMod:true, staffTagCrown:true, removedAlerts:false, removedAlertsFriends:true, removedAlertsServers:true, removedAlertsClosed:true, removedAlertsPush:false, fullImages:false, fullImagesChat:true, fullImagesViewer:true, fullImagesGifs:false, fullImagesAvatars:true, alwaysTrust:false, alwaysTrustLinks:true, alwaysTrustFiles:true, noConfirmPin:false, clickableMentions:false, hideAnything:false, hideAnythingSpots:"", language:"auto", hiddenFeatures:"" };
@@ -92,7 +93,7 @@
             validUser: false, youBarSettings: false, splitMessages: false,
             translate: false, translateTarget: "discord", translateLanguage: "en", translateMode: "auto", translateAsk: "both", translateNote: true, translateOriginal: false,
             userNotif: false, userNotifFriends: true, userNotifStatus: true, userNotifMessages: true, userNotifTyping: true, userNotifPush: false,
-            accountSwitcher: false, accountSwitcherYouBar: true, appIcons: false, nitroThemes: false, customThemes: false, customThemesBackground: true, materialYou: false, materialYouColor: "wallpaper", materialYouTint: "balanced",
+            accountSwitcher: false, accountSwitcherYouBar: true, appIcons: false, profileDecor: false, nitroThemes: false, customThemes: false, customThemesBackground: true, materialYou: false, materialYouColor: "wallpaper", materialYouTint: "balanced",
             iconPacks: false, iconPacksTheme: true,
             messageHighlight: false, messageHighlightThickness: 2, messageHighlightBrightness: 50, messageHighlightPingColor: "default", serverInfo: false, serverInfoFriends: true, serverEdit: false,
             fixEmbeds: false, fixEmbedsSites: "", fixEmbedsClean: true, fixEmbedsDark: true, fixEmbedsStyle: "full", fixEmbedsTranslate: "off", fixEmbedsLanguage: "en", tenorGifs: false, tenorGifsSource: "both", hideBlocked: false, hideBlockedBlocked: true, hideBlockedIgnored: true, hideBlockedReplies: false, hideBlockedCloseDms: false, bulkDelete: false, bulkDeleteConfirm: true, bulkDeleteIncludeCached: true, experiments: false, noHandsfree: false, voiceOptions: false, voiceOptionsVolume: false, voiceOptionsVolumeLevel: 50, voiceOptionsOutput: "default", voiceOptionsJoinSound: true, voiceOptionsLeaveSound: true, voiceOptionsSoundVolume: 100, voiceOptionsExit: false, voiceOptionsExitSound: "", cleanChannels: false, cleanChannelsEmoji: true, cleanChannelsSymbols: true, cleanChannelsFonts: true, cleanChannelsSpaces: false, anonFiles: false, staffTag: false, staffTagOwner: true, staffTagAdmin: true, staffTagManager: true, staffTagMod: true, staffTagCrown: true, removedAlerts: false, removedAlertsFriends: true, removedAlertsServers: true, removedAlertsClosed: true, removedAlertsPush: false, fullImages: false, fullImagesChat: true, fullImagesViewer: true, fullImagesGifs: false, fullImagesAvatars: true, alwaysTrust: false, alwaysTrustLinks: true, alwaysTrustFiles: true, noConfirmPin: false, clickableMentions: false, hideAnything: false, hideAnythingSpots: "", language: "auto", hiddenFeatures: ""
@@ -332,6 +333,7 @@
         if (features.hideAnything && settings.hideAnythingSpots) { const labels = hideRowLabels(); if (labels) extra.hideAnythingLabels = labels; }
         if (features.materialYou && materialYou.system) extra.materialYouSystem = materialYou.system;
         if (features.serverEdit && serverEdits.size) extra.serverEdits = serverEditData(false);
+        if (features.profileDecor && profileDecor.byUser.size) extra.profileDecor = profileDecorData();
         if (features.nitroThemes && nitroTheme.preset != null) extra.nitroTheme = {preset:nitroTheme.preset, theme:nitroTheme.theme};
         return JSON.stringify(Object.keys(extra).length ? Object.assign({}, settings, extra) : settings);
     }
@@ -633,6 +635,7 @@
                 if (features.materialYou && !materialYou.system && savedPalette && typeof savedPalette === "object" &&
                     ["accent1", "accent2", "accent3", "neutral1", "neutral2"].every(k => Array.isArray(savedPalette[k]) && savedPalette[k].length === 13 && savedPalette[k].every(v => /^#[0-9a-f]{6}$/i.test(v))))
                     materialYou.system = savedPalette;
+                if (features.profileDecor && !profileDecor.byUser.size) profileDecorLoad(loaded.profileDecor);
                 const savedTheme = loaded.nitroTheme;
                 if (features.nitroThemes && nitroTheme.preset == null && savedTheme && typeof savedTheme === "object" && typeof savedTheme.preset === "number" &&
                     Number.isInteger(savedTheme.preset) && savedTheme.preset >= 0 && savedTheme.preset < 1000) {
@@ -1085,7 +1088,7 @@
         validUser:[8213, "AtIcon"], copyBios:[5042, "CopyIcon"], reviewDB:[9354, "ThumbsUpIcon"], readAll:[15928, "DoubleCheckmarkIcon"],
         hiddenChannels:[8218, "LockIcon"], systemFont:[15974, "LettersIcon"], systemEmoji:[12901, "ChatSmileIcon"],
         youBarSettings:[7092, "SettingsIcon"], quests:[13012, "QuestsIcon"],
-        badges:[8921, "TrophyIcon"], userNotif:[8768, "BellIcon"], accountSwitcher:[8212, "GroupIcon"], appIcons:[8229, "AppsIcon"],
+        badges:[8921, "TrophyIcon"], userNotif:[8768, "BellIcon"], accountSwitcher:[8212, "GroupIcon"], appIcons:[8229, "AppsIcon"], profileDecor:[17143, "SparklesIcon"],
         customThemes:[15652, "EyeDropperIcon"], iconPacks:[11063, "ImageSparkleIcon"], messageHighlight:[16947, "PaintbrushThinIcon"], serverInfo:[5046, "CircleInformationIcon"], serverEdit:[9720, "PencilIcon"], fixEmbeds:[12910, "EmbedIcon"], tenorGifs:[9748, "GifIcon"], nitroThemes:[17143, "SparklesIcon"], materialYou:[15560, "PaintPaletteIcon"], hideBlocked:[17072, "ChatShieldIcon"], bulkDelete:[6868, "CircleCheckIcon"], experiments:[15894, "BeakerIcon"], cleanChannels:[12605, "MagicWandIcon"], noHandsfree:[12271, "HeadphonesIcon"], voiceOptions:[8224, "VoiceNormalIcon"], staffTag:[10262, "CrownIcon"], removedAlerts:[5036, "UserMinusIcon"], hideAnything:[10260, "XLargeIcon"], fullImages:[11587, "ImagesIcon"], alwaysTrust:[10410, "ShieldIcon"], noConfirmPin:[10334, "PinIcon"], clickableMentions:[8213, "AtIcon"]};
     const venusIcons = new Map();
     function venusIcon(id, name, fallback) {
@@ -1630,6 +1633,7 @@
         withOptions("appearance", "hideAnything", "VENUS_HIDEANYTHING", "Remove anything", "Tap a button you never use to remove it, right where it is.", "Remove anything", HideAnythingSettings);
         toggle("appearance", "youBarSettings", "Venus button on profile bar", "A shortcut to Venus next to the notifications bell.");
         toggle("appearance", "appIcons", "Unlock app icons", "Use any Discord app icon without Nitro.");
+        toggle("appearance", "profileDecor", "Unlock profile decor", "Use any avatar decoration or nameplate without Nitro. Only you see them.");
         toggle("appearance", "nitroThemes", "Unlock Nitro themes", "Use Discord's gradient themes without Nitro, on this phone.");
         withOptions("appearance", "materialYou", "VENUS_MATERIALYOU", "Material You colors", "Colors Discord to match your wallpaper, in light and dark.", "Material You", MaterialYouSettings);
         withOptions("appearance", "customThemes", "VENUS_CUSTOMTHEMES", "Custom themes", "Install Revenge and Vendetta color themes from a link.", "Custom themes", CustomThemesSettings);
@@ -8430,6 +8434,152 @@
             if (patched !== inner) return cloneWith(component, key, patched);
         }
         return component;
+    }
+    // Unlock profile decor: pick any avatar decoration or nameplate without owning it. The picker treats every item as
+    // yours (canUseCollectibles in 4769, and the "preview" section folded into the owned one in the section hooks 13473 /
+    // 14902). Discord's server rejects items you don't own, so the save is intercepted (ProfileUpdateRequestUtils 10640):
+    // the choice is taken out of what is sent, kept on this phone per account, and laid over your own user (UserStore 1390)
+    // and over the display hooks (6053, 8338). Nobody else sees it.
+    const profileDecor = {byUser:new Map(), sections:new WeakMap()};
+    function profileDecorData() {
+        const out = {};
+        profileDecor.byUser.forEach((v, id) => { out[id] = v; });
+        return out;
+    }
+    function profileDecorLoad(saved) {
+        if (!saved || typeof saved !== "object") return;
+        Object.keys(saved).forEach(id => {
+            const v = saved[id];
+            if (!/^\d{17,20}$/.test(id) || !v || typeof v !== "object") return;
+            const entry = {};
+            ["avatarDecoration", "nameplate"].forEach(k => {
+                const item = v[k];
+                if (item === null) entry[k] = null;
+                else if (item && typeof item === "object" && typeof item.asset === "string" && item.asset.length < 200 && /^\d{1,20}$/.test(String(item.skuId)))
+                    entry[k] = {asset:item.asset, skuId:String(item.skuId), label:typeof item.label === "string" ? item.label.slice(0, 100) : undefined, palette:typeof item.palette === "string" ? item.palette.slice(0, 40) : undefined};
+            });
+            profileDecor.byUser.set(id, entry);
+        });
+        later(profileDecorApply, 0);
+    }
+    function profileDecorMine(kind) {
+        const me = currentUser();
+        const entry = enabled("profileDecor") && me ? profileDecor.byUser.get(me.id) : null;
+        return entry && entry[kind] !== undefined ? entry[kind] : undefined;
+    }
+    function profileDecorRecord(kind, item) {
+        if (item === null) return null;
+        if (!item || typeof item !== "object" || typeof item.asset !== "string") return undefined;
+        const sku = item.skuId != null ? String(item.skuId) : item.sku_id != null ? String(item.sku_id) : null;
+        if (!sku) return undefined;
+        const out = {asset:item.asset, skuId:sku};
+        if (typeof item.label === "string") out.label = item.label;
+        if (kind === "nameplate" && typeof item.palette === "string") out.palette = item.palette;
+        return out;
+    }
+    function profileDecorRemember(kind, item) {
+        const me = currentUser();
+        const value = profileDecorRecord(kind, item);
+        if (!me || value === undefined) return;
+        const entry = profileDecor.byUser.get(me.id) || {};
+        entry[kind] = value;
+        profileDecor.byUser.set(me.id, entry);
+        save();
+        later(profileDecorApply, 0);
+    }
+    // Lays the saved choice over your own user in place, so every screen that reads it (chat, profile, lists) agrees.
+    function profileDecorApply() {
+        const me = currentUser();
+        if (!me || !enabled("profileDecor")) return;
+        const deco = profileDecorMine("avatarDecoration"), plate = profileDecorMine("nameplate");
+        let changed = false;
+        try {
+            if (deco !== undefined) {
+                const next = deco ? {asset:deco.asset, skuId:deco.skuId, expiresAt:null} : null;
+                const cur = me.avatarDecoration;
+                if ((cur && cur.skuId) !== (next && next.skuId)) { me.avatarDecoration = next; changed = true; }
+            }
+            if (plate !== undefined) {
+                const cur = me.collectibles && me.collectibles.nameplate;
+                if ((cur && cur.skuId) !== (plate && plate.skuId)) {
+                    const next = plate ? {skuId:plate.skuId, asset:plate.asset, label:plate.label, palette:plate.palette, expiresAt:null} : undefined;
+                    me.collectibles = Object.assign({}, me.collectibles, {nameplate:next});
+                    changed = true;
+                }
+            }
+        } catch (_) {}
+        if (changed && userStore && typeof userStore.emitChange === "function") try { userStore.emitChange(); } catch (_) {}
+    }
+    function profileDecorAttach(dispatcher) {
+        if (profileDecor.attached || !dispatcher || typeof dispatcher.addInterceptor !== "function") return;
+        profileDecor.attached = true;
+        try {
+            dispatcher.addInterceptor(function (action) {
+                if (action && (action.type === "CONNECTION_OPEN" || action.type === "CURRENT_USER_UPDATE" || action.type === "USER_UPDATE") && enabled("profileDecor") && profileDecor.byUser.size)
+                    later(profileDecorApply, 0);
+                return false;
+            });
+        } catch (_) { profileDecor.attached = false; }
+    }
+    function hookDecorHooks(exports) {
+        const mine = (user) => { const me = currentUser(); return me && user && user.id === me.id; };
+        exports = hookExport(exports, "getAvatarDecoration", function (orig, self, args) {
+            const v = mine(args[0]) ? profileDecorMine("avatarDecoration") : undefined;
+            return v === undefined ? orig.apply(self, args) : v ? {asset:v.asset, skuId:v.skuId, expiresAt:null} : undefined;
+        });
+        return hookExport(exports, "useAvatarDecoration", function (orig, self, args) {
+            const real = orig.apply(self, args);
+            const v = mine(args[0]) ? profileDecorMine("avatarDecoration") : undefined;
+            return v === undefined ? real : v ? {asset:v.asset, skuId:v.skuId, expiresAt:null} : undefined;
+        });
+    }
+    function decorNameplateHook(orig, self, args) {
+        const real = orig.apply(self, args);
+        const opts = args[0], me = currentUser();
+        if (!opts || !opts.user || !me || opts.user.id !== me.id) return real;
+        const v = profileDecorMine("nameplate");
+        if (v === undefined) return real;
+        return v ? {skuId:v.skuId, asset:v.asset, label:v.label, palette:v.palette, expiresAt:null} : undefined;
+    }
+    // Takes the choice out of the request and keeps it here. null (remove) is kept too; undefined means "not changed".
+    function decorStrip(pending, remember) {
+        if (!pending || typeof pending !== "object" || !enabled("profileDecor")) return pending;
+        const a = pending.pendingAvatarDecoration, n = pending.pendingNameplate;
+        const pe = pending.pendingProfileEffect, pf = pending.pendingProfileFrame;
+        if (a === undefined && n === undefined) return pending;
+        if (remember) {
+            if (a !== undefined) profileDecorRemember("avatarDecoration", a);
+            if (n !== undefined) profileDecorRemember("nameplate", n);
+        }
+        return Object.assign({}, pending, {pendingAvatarDecoration:undefined, pendingNameplate:undefined, pendingProfileEffect:pe, pendingProfileFrame:pf});
+    }
+    function hookDecorRequests(exports) {
+        exports = hookExport(exports, "getAccountUpdateForUpdateRequest", function (orig, self, args) {
+            const rest = Array.prototype.slice.call(args, 1);
+            return orig.apply(self, [decorStrip(args[0], true)].concat(rest));
+        });
+        return hookExport(exports, "getGuildMemberChangesForUpdateRequest", function (orig, self, args) {
+            const rest = Array.prototype.slice.call(args, 1);
+            return orig.apply(self, [decorStrip(args[0], false)].concat(rest));
+        });
+    }
+    // The section hooks return [{section, items, height, header}]: owned items, Nitro items and "preview" items you can't
+    // pick. Preview items move into the owned section so they can be chosen like the rest.
+    function hookDecorSections(exports) {
+        const PURCHASE = exports.PURCHASE, PREVIEW = exports.PREVIEW;
+        if (PURCHASE === undefined || PREVIEW === undefined) return exports;
+        return hookExport(exports, "default", function (orig, self, args) {
+            const list = orig.apply(self, args);
+            if (!enabled("profileDecor") || !Array.isArray(list)) return list;
+            let cached = profileDecor.sections.get(list);
+            if (cached) return cached;
+            const preview = list.find(x => x && x.section === PREVIEW), owned = list.find(x => x && x.section === PURCHASE);
+            if (!preview || !owned || !Array.isArray(preview.items) || !Array.isArray(owned.items)) return list;
+            const merged = Object.assign({}, owned, {items:owned.items.concat(preview.items)});
+            cached = list.filter(x => x !== preview).map(x => x === owned ? merged : x);
+            profileDecor.sections.set(list, cached);
+            return cached;
+        });
     }
     // Unlock app icons: lets you pick any Discord app icon in Settings -> App Icon without Nitro, stops
     // AppIconPremiumManager (18051) from resetting the icon on app state changes, and removes the "Unlock all
@@ -17700,6 +17850,10 @@
             case 84: return features.iconPacks ? hookAssetRegistryModule(exports) : exports;
             case 328: return features.iconPacks ? hookImageModule(exports) : exports;
             case 4817: return features.iconPacks ? hookExport(exports, "BaseIconImage", baseIconImageHook) : exports;
+            case 6053: return features.profileDecor ? hookDecorHooks(exports) : exports;
+            case 8338: return features.profileDecor ? hookExport(exports, "useNameplate", decorNameplateHook) : exports;
+            case 10640: return features.profileDecor ? hookDecorRequests(exports) : exports;
+            case 13473: case 14902: return features.profileDecor ? hookDecorSections(exports) : exports;
             case 9464: return features.appIcons ? hookAppIconConstants(exports) : exports;
             case 18051: return features.appIcons ? hookAppIconPremiumManager(exports) : exports;
             case 15831: case 15832: case 17697: return features.appIcons ? hookComponent(exports, appIconsScreen) : exports;
@@ -17842,7 +17996,7 @@
             case 5300: return features.quickDelete || features.noConfirmPin ? replaceValue(exports, "default", hookExport(exports.default, "show", quickConfirm)) : exports;
             case 5434: if (features.noDelete) { messageRecords = exports; restoreDeleted(); } return exports;
             case 1390:
-                if (exports && exports.default && (features.validUser || features.splitMessages || features.fixEmbeds || features.translate || features.userNotif || features.removedAlerts || features.accountSwitcher || features.appIcons || features.nitroThemes || features.messageHighlight || features.serverInfo || features.noDelete || features.reviewDB || features.platformIndicators || features.hiddenChannels || features.gestures || features.freeNitro || features.badges || features.bulkDelete || features.experiments))
+                if (exports && exports.default && (features.validUser || features.splitMessages || features.fixEmbeds || features.translate || features.userNotif || features.removedAlerts || features.accountSwitcher || features.appIcons || features.profileDecor || features.nitroThemes || features.messageHighlight || features.serverInfo || features.noDelete || features.reviewDB || features.platformIndicators || features.hiddenChannels || features.gestures || features.freeNitro || features.badges || features.bulkDelete || features.experiments))
                     userStore = exports.default;
                 if (features.noDelete || features.reviewDB || features.platformIndicators || features.hiddenChannels) restoreDeleted();
                 return exports;
@@ -17872,6 +18026,7 @@
                 if (features.quests) questsInit(exports.default);
                 if (features.badges && exports && exports.default) badgesInit(exports.default);
                 if (features.nitroThemes && exports && exports.default) nitroThemeAttach(exports.default);
+                if (features.profileDecor && exports && exports.default) profileDecorAttach(exports.default);
                 if (features.bulkDelete && exports && exports.default) bulkDeleteInit(exports.default);
                 if (features.experiments && exports && exports.default) experimentsInit(exports.default);
                 if (features.voiceOptions && exports && exports.default) voiceOptionsInit(exports.default);
@@ -17970,7 +18125,7 @@
             case 5987: if (features.freeNitro) emojiStore = exports.default; return exports;
             case 6030: if (features.freeNitro) stickerStore = exports.default; return exports;
             case 4769: {
-                if (!features.freeNitro && !features.appIcons && !features.nitroThemes) return exports;
+                if (!features.freeNitro && !features.appIcons && !features.nitroThemes && !features.profileDecor) return exports;
                 // The pinned build exports the capabilities on a default singleton;
                 // named aliases are not used by its picker. Hook the inspected object.
                 let capabilities = exports.default || exports;
@@ -17989,6 +18144,7 @@
                     if (typeof exports.canUseClientThemes === "function" && exports.default)
                         exports = hookExport(exports, "canUseClientThemes", premiumOverride("canUseClientThemes", "nitroThemes"));
                 }
+                if (features.profileDecor) patchCapability("canUseCollectibles", "profileDecor");
                 if (features.appIcons) {
                     patchCapability("canUsePremiumAppIcons", "appIcons");
                     if (typeof exports.canUsePremiumAppIcons === "function" && exports.default)
